@@ -55,7 +55,7 @@ router.post("/login", (req, res) => {
         // jwt.sign("规则","加密名字","过期时间","箭头函数")
         jwt.sign(rule,secretOrKey,{expiresIn:3600},(err,token) => {
           res.json({
-            status:true,
+            code:true,
             message:"登录成功",
             token:"Bearer " + token
           })
